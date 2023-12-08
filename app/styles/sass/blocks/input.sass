@@ -1,0 +1,54 @@
+.input-wrap
+  @include fww
+  margin-left: rem(-15)
+  margin-right: rem(-15)
+
+  .input,
+  .textarea
+    padding: 0 rem(15)
+    display: flex
+    flex-direction: column
+
+.input,
+.textarea
+  position: relative
+  width: 100%
+
+  input
+    height: rem(36)
+    padding: 0 rem(15)
+
+  textarea
+    min-height: rem(100)
+    padding: rem(15)
+    resize: vertical 
+
+  input,
+  textarea
+    border-radius: rem(6)
+    border: rem(1) solid transparent
+    width: 100%
+    color: $dc
+
+  &__message
+    position: absolute
+    top: calc( 100% + 3px )
+    left: rem(17)
+
+  &_error
+    input
+      border-color: red
+      color: red
+    .input__message
+      color: red
+
+  &_success
+    input
+      border-color: green
+      color: green
+
+    .input__message
+      color: green
+
+  &_w50p
+    width: 50%

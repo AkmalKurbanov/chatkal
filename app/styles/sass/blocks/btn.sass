@@ -1,0 +1,32 @@
+.btn
+  height: rem(40)
+  border-radius: rem(6)
+  @include aic-jcc
+  text-align: center
+  padding: rem(12) rem(32)
+  text-decoration: none
+  outline: none
+  border: none
+  background: none
+  transition: $tr
+  cursor: pointer
+
+  &_accent
+    background: $mc
+    color: $wc 
+    
+    &:hover
+      background: #5F5F5F
+  
+  &_secondary
+    background: #5F5F5F
+    color: $wc 
+    &:hover
+      background: $mc
+  
+  &_reset
+    margin: 0
+    padding: 0
+    height: auto
+    width: auto
+ 

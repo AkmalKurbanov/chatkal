@@ -1,0 +1,25 @@
+.breadcrumbs
+  &__wrap
+    padding: rem(6) rem(8)
+    border-radius: rem(4)
+  
+  ul
+    li
+      position: relative
+      padding-right: rem(12)
+      margin-right: rem(4)
+      display: inline-block
+
+      &::after
+        position: absolute
+        content: '/'
+        right: 0
+        top: rem(2)
+
+      &:last-child
+        margin: 0
+        padding: 0
+        pointer-events: none
+
+        &::after
+          display: none

@@ -1,0 +1,82 @@
+extends layouts/main
+
+block vars
+  - var description = '';
+  - var keywords= '';
+  - var ogtitle = '';
+  - var ogtype = '';
+  - var ogurl = '';
+  - var ogimg = '';
+
+block title
+  | Структура
+block main
+  .wrapper
+    include includes/search
+    .content
+      
+      include includes/svg-sprite
+      include includes/header
+      include includes/breadcrumbs
+
+      .structure
+        .container
+          .title.title_h2.title_border-none.text-accent.mb-40 Структура
+
+          .structure__item.text-center.d-flex.align-center.justify-center.flex-column
+            .structure__item-img.d-flex.align-center.justify-center.mb-25.pos-r.border-radius-100 
+              img.object-fit-cover(src="images/dist/structure1.webp", alt="")
+            
+            div
+              p.fz-18.fw-700.text-accent.text-uppercase.mb-10 Тутуев Канболот Мусаевич
+              p.fz-18.text-black.text-uppercase.mb-10 Мэр города нарын
+              p.text-black.opacity-0-5 Дни приема: Четверг, с 16:00 ч. до 18:00 ч.  
+        
+          .structure__wrap.d-flex.align-start.flex-wrap 
+            
+            each item in [1,2,3]
+              .structure__item.text-center.d-flex.align-center.justify-center.flex-column
+                .structure__item-img.d-flex.align-center.justify-center.mb-25.pos-r.border-radius-100 
+                  img.object-fit-cover(src="images/dist/structure.webp", alt="")
+
+                div
+                  p.fz-18.fw-700.text-accent.text-uppercase.mb-10 фамилия имя отчество
+                  p.fz-18.text-black.text-uppercase.mb-10 Должность
+                  p.text-black.opacity-0-5 Дни приема: Четверг, с 16:00 ч. до 18:00 ч.  
+
+          .title.title_h2.title_border-none.text-accent.mb-30 Напишите нам
+          form(action="")
+            .input-wrap
+              .input.input_w50p.input_error.mb-25  
+                label(for="name").fz-15.text-gray.mb-5 ФИО 
+                  span.text-accent *
+                input(type="text" name="ФИО")#name.bg-lgray
+                .input__message.fz-12 Lorem, ipsum.
+              
+              .input.input_w50p.input_success.mb-25  
+                label(for="category").fz-15.text-gray.mb-5 Категория  
+                  span.text-accent *
+                input(type="text" name="Категория")#category.bg-lgray
+                .input__message.fz-12 Lorem, ipsum.
+              
+              .input.input_w50p.mb-25  
+                label(for="phone").fz-15.text-gray.mb-5 Номер телефона   
+                  span.text-accent *
+                input(type="text" name="Номер телефона")#phone.bg-lgray
+              
+              .input.input_w50p.mb-25  
+                label(for="email").fz-15.text-gray.mb-5 Email    
+                  span.text-accent *
+                input(type="text" name="Email")#email.bg-lgray
+              .textarea.mb-25  
+                label(for="email").fz-15.text-gray.mb-5 Текст     
+                  span.text-accent *
+                textarea(name="Email")#email.bg-lgray
+            
+            .d-flex.justify-between
+              button.btn.btn_secondary Добавить фото
+              button.btn.btn_accent Отправить
+    include includes/footer
+
+
+  include includes/scripts

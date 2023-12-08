@@ -1,0 +1,96 @@
+header.header.mb-5.pos-r
+  .container
+    .header__top.d-flex.align-center.justify-between.bg-lgray
+      .header__top-item
+        .d-flex.align-center 
+          p.fz-13.text-dark.mr-10 Следите за нами в соцсетях:
+          .social 
+            ul.d-flex.align-center
+              mixin social(name,nameRu)
+                li
+                  a(href="#")
+                    span Сылка социальной сети
+                      =nameRu
+                    .icon  
+                      svg(width="20" height="20")
+                        use(xlink:href='#'+name)  
+              +social('facebook','фейсбук')
+              +social('instagram','инстаграм')
+              +social('twitter','твиттер')
+              +social('youtube','юютююб')
+
+      .header__top-item.d-flex.align-center 
+        #specialButton.d-flex.align-center.cursor-pointer.h-text-accent.mr-15
+          .icon.mr-5
+            svg(width="18" height="18")
+              use(xlink:href='#eye')
+          .fz-13.text-dark Версия для слабовидящих      
+
+        .language
+          .language__selected.d-flex.align-center.dropdown-parent 
+            .icon.mr-5
+              svg(width="18" height="18")
+                use(xlink:href='#globus')
+                
+            span.fz-13.text-dark.pos-r.pr-15.cursor-pointer.d-flex.align-center.dropdown-js Русский     
+              .language__angle.icon
+                svg(width="15" height="15")
+                  use(xlink:href='#angle')
+
+              .language__dropdown.dropdown
+                ul
+                  li
+                    a(href="#") Кырызча     
+                  li
+                    a(href="#") Русский     
+      
+    .header__bottom.d-flex.align-end.justify-between
+
+      a(href="#").logo.d-flex.align-center.justify-center.pt-15.pb-15.mr-20
+        img(src="images/dist/logo-header.svg", alt="")
+      
+      .w100p
+        .d-flex.align-center.justify-between
+          .fz-18.text-uppercase.text-accent.fw-600 
+            p ЧАТКАЛ ЗОЛОТАЯ ДОЛИНА   
+
+          .d-flex.align-center 
+            .header__bottom-item.mr-25 
+              .d-flex.align-center.cursor-pointer
+                .icon.icon_fill-accent.mr-5
+                  svg(width='20' height='20')
+                    use(xlink:href='#marker')
+                .fz-13.text-dark Каныш-Кыя айылы, Ташбай Айдаров көч. 17      
+              
+            .header__bottom-item 
+              .d-flex.align-center.cursor-pointer.h-text-accent
+                .icon.icon_fill-accent.mr-5
+                  svg(width='20' height='20')
+                    use(xlink:href='#phone')
+                a(href="tel:+996374930064").fz-13.text-dark.text-decoration-none +996 (3749) 3-00-64      
+        .line-separate.mt-10.mb-10
+        .d-flex.align-start.justify-between     
+          .header__nav.nav-js
+            ul.d-flex.align-center
+              each item in [1,2,3,4,5,6] 
+                li.header__nav-li-parent.mr-25.pos-r.pb-10
+                  a(href="#").header__nav-a-parent.text-decoration-none.fz-15.text-dark.d-flex.align-center Категория 
+                    =item  
+                    .icon 
+                      svg(width="18" height="18")
+                        use(xlink:href='#angle')
+
+                  ul.header__nav-dropdown.dropdown
+                    each item in [1,2,3,4,5,6] 
+                      li 
+                        a(href="#") option  
+                          =item 
+
+              li.header__nav-li-parent.mr-25.pos-r.pb-10
+                a(href="#").header__nav-a-parent.text-decoration-none.fz-15.text-dark.d-flex.align-center Контакты 
+
+          button.btn.btn_reset.mt-5.search-js
+            .icon 
+              svg(width="14" height="14")
+                use(xlink:href='#search')  
+

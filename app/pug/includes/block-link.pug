@@ -1,0 +1,11 @@
+.block-link-wrap.d-flex.justify-center
+  each item,index in ['Обращение <br> граждан','Депутаты','Категория 3','Категория 4']  
+    a(href="#").block-link.mr-30.bg-white.p-25.text-dark.cursor-pointer.text-decoration-none
+      .block-link__movable-element
+        .icon.pos-r.mb-10
+          //- img(src="", alt="") 
+          svg(width="32" height="32")
+            use(xlink:href='#block-link'+(index + 1))
+        span!=item    
+
+      .btn.btn_accent.fz-13 Перейти к разделу

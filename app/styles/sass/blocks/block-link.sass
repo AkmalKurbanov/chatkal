@@ -1,0 +1,107 @@
+.block-link-wrap
+  transform: translateY(-50%)
+.block-link
+  border-radius: rem(8)
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25)
+  max-width: rem(220)
+  min-width: rem(220)
+  width: 100%
+  height: rem(160)
+  position: relative
+  @include aic
+
+  &__movable-element
+    transition: $tr
+
+    .icon
+      max-width: rem(32)
+      min-width: rem(32)
+      width: 100%
+      height: rem(32)
+
+      img
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+        object-fit: contain
+        object-position: center
+
+    span
+      display: block
+
+    &.up
+      transform: translateY(-30px)
+
+      .icon,
+      span
+        animation-name: bounceUp
+        animation-timing-function: ease
+        animation-fill-mode: forwards
+        animation-duration: .8s
+        margin-bottom: rem(5) !important
+
+    &.down
+      transform: none
+
+      .icon,
+      span
+        animation-name: bounceDown
+        animation-timing-function: ease
+        animation-fill-mode: forwards
+        animation-duration: .8s
+
+  .btn
+    padding: rem(7) rem(10) !important
+    height: auto !important
+    border-radius: rem(4)
+    position: absolute
+    left: 50%
+    bottom: rem(25)
+    transform: translateX(-50%)
+    width: calc( 100% - 50px )
+    opacity: 0
+    pointer-events: none
+
+  &:last-child
+    margin-right: 0!important
+
+  @keyframes bounceUp
+    0%
+      transform: scale(1,1)
+    10%
+      transform: scale(1.1,.9)
+    30%
+      transform: scale(.9,1.1)
+    50%
+      transform: scale(1.05,.95)
+    57%
+      transform: scale(1,1)
+    64%
+      transform: scale(1,1)
+    100%
+      transform: scale(1,1)
+
+  @keyframes bounceDown
+    0%
+      transform: scale(1,1)
+    10%
+      transform: scale(1.1,.9)
+    30%
+      transform: scale(.9,1.1)
+    50%
+      transform: scale(1.05,.95)
+    57%
+      transform: scale(1,1)
+    64%
+      transform: scale(1,1)
+    100%
+      transform: scale(1,1)
+
+  &:hover
+    .btn
+      opacity: 1
+      pointer-events: inherit

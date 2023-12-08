@@ -1,0 +1,137 @@
+extends layouts/main
+
+block vars
+  - var description = '';
+  - var keywords= '';
+  - var ogtitle = '';
+  - var ogtype = '';
+  - var ogurl = '';
+  - var ogimg = '';
+
+block title
+  | main
+block main
+  .wrapper
+    include includes/search
+    .content
+      
+      include includes/svg-sprite
+      include includes/header
+      include includes/hero
+
+      .list
+        .container 
+          .title.title_h2.mb-25 
+            p Новости
+          .list__col-wrap.d-flex
+            .list__col
+              a(href="#").list__last-news.list__last-news_first.text-decoration-none
+                .list__img
+                  img.object-fit-cover.transition(src="images/dist/news1.webp", alt="")
+                .d-flex.align-start.mt-10.mb-10 
+                  .icon.mr-5   
+                    svg(width="16" height="16")
+                      use(xlink:href='#clock')  
+                  .fz-14.text-accent 10:08, 16.11.2023    
+
+                p.fz-18.text-dark.lh-24 Его называли «кыргызским Виктором Цоем». Как выглядит дом Таалая Бектурганова. Фото  
+
+            .list__col.list__col_padding-none
+              .d-flex.flex-wrap.w100p
+                each item in ['Слитки золота увезли на Toyota Land Cruiser: Один из братьев, отбывающий...','Кабмин трансформировал 19,4 тыс. га земли на участке «Сандалаш» из катег...','Генпрокуратура выявила добычу золота в Чаткальском районе за пред...','В городе Каракол загорелось помещение банка']
+                  .list__col.mb-20
+                    a(href="#").list__last-news.list__last-news_vertical.text-decoration-none
+                      .list__img
+                        img.object-fit-cover.transition(src="images/dist/news1.webp", alt="") 
+                      .d-flex.align-start.mt-5.mb-5
+                        .icon.mr-5   
+                          svg(width="16" height="16")
+                            use(xlink:href='#clock')  
+                        .fz-14.text-accent 10:08, 16.11.2023 
+                      p.fz-13.text-dark.lh-18=item
+      
+      .advertising.advertising-js
+        .container.h100p
+          a(href="#").d-fflex.align-center.justify-center
+            img(src="images/dist/advertising.gif", alt="") 
+      
+      .popular-pace
+        .container
+          .title.title_h2.mb-25 
+            p Популярные места   
+
+          img(src="images/dist/map.webp", alt="").mb-50.w100p           
+
+      .vote
+        .container 
+          .title.title_h2.mb-25 
+            p Голосование
+
+          .vote__wrap.pos-r
+            .swiper.vote-js 
+              .swiper-wrapper
+                each item in [1,2,3,4,5,6,7,8]
+                  .swiper-slide
+                    .vote__item
+                      .vote__item-block.bg-white.text-center
+                        p.fz-20.lh-24.fw-600.text-dark.mb-15 Фестиваль ландшафтного искусства 
+                        p.fz-14.lh-20.text-dark В столице прошел Фестиваль ландшафтного искусства LANDSHAFT OPEN.KG. Акимат города Каракол продолжает работать над новыми проектами, с целью увеличить количесто интересных и красочных фестивалей.
+                      
+                      .vote__panel 
+                        .vote__result.d-flex.align-stretch
+                          .vote__for.text-white.fw-700.text-center.d-flex.align-center.justify-center.transition(style="width: 75%") 
+                            p 75% 
+                          .vote__against.text-white.fw-700.text-center.d-flex.align-center.justify-center.transition(style="width: 25%") 
+                            p 25%  
+                        .vote__control-btn.d-flex.align-center.justify-center.mt-15 
+                          .vote__btn.vote__btn_for.d-flex.align-end.text-green.cursor-pointer.mr-35 
+                            .icon.mr-5.transition 
+                              svg(width="20" height="20")
+                                use(xlink:href='#thumb-up') 
+                            p За
+                          .vote__btn.vote__btn_against.d-flex.align-end.text-red.cursor-pointer 
+                            .icon.mr-5.transition 
+                              svg(width="20" height="20")
+                                use(xlink:href='#thumb-bottom') 
+                            p Против
+
+            .swiper-button-prev.vote-prev.slider-nav.slider-nav_prev.bg-white.d-flex.align-center.justify-center.border-radius-100
+              .icon 
+                svg(width="24" height="24")
+                  use(xlink:href='#angle')
+            
+            .swiper-button-next.vote-next.slider-nav.slider-nav_next.bg-white.d-flex.align-center.justify-center.border-radius-100
+              .icon 
+                svg(width="24" height="24")
+                  use(xlink:href='#angle')
+
+      .pride
+        .container
+          .title.title_h2 
+            p Наша гордость
+          .pride__wrap.pos-r
+            .swiper.pride-js 
+              .swiper-wrapper
+                each item in [1,2,3,4,5,6,7,8]
+                  .swiper-slide
+                    .pride__item 
+                      .slider__item-img.mb-15
+                        img(src="images/dist/pride.webp", alt="") 
+                      .slider__item-desc.text-center.fz-20.text-dark.fw-600
+                        p Таалай Бектурганов 
+
+            .swiper-button-prev.pride-prev.slider-nav.slider-nav_prev.bg-white.d-flex.align-center.justify-center.border-radius-100
+              .icon 
+                svg(width="24" height="24")
+                  use(xlink:href='#angle')
+            .swiper-button-next.slider-nav.pride-next.slider-nav_next.bg-white.d-flex.align-center.justify-center.border-radius-100
+              .icon 
+                svg(width="24" height="24")
+                  use(xlink:href='#angle')
+
+
+
+    include includes/footer
+
+
+  include includes/scripts

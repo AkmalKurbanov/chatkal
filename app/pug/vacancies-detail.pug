@@ -1,0 +1,39 @@
+extends layouts/main
+
+block vars
+  - var description = '';
+  - var keywords= '';
+  - var ogtitle = '';
+  - var ogtype = '';
+  - var ogurl = '';
+  - var ogimg = '';
+
+block title
+  | Вакансии детально
+block main
+  .wrapper
+    include includes/search
+    .content
+      
+      include includes/svg-sprite
+      include includes/header
+      include includes/breadcrumbs
+
+      
+      .container 
+        .pb-50
+          .title.title_h2.title_border-none.mb-15
+            p Вакансии детально
+          
+          p.text-dark.lh-22.mb-25 Министерство экономики и коммерции Кыргызской Республики объявляет о проведении открытого конкурса на зачисление в резерв кадров на административные должности государственной гражданской службы центрального аппарата и Межрегионального управления:
+          
+          p.fz-14.text-dark.lh-18.mb-25
+            b Последний срок:
+            | 17 июля 2022 г.
+
+          p.text-dark.lh-22 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae ipsam ipsum dolores provident nostrum vero eveniet quasi inventore, tenetur cumque error sit atque culpa a voluptatibus ad. Pariatur voluptatum officiis labore nobis fugiat ipsam totam aspernatur voluptas quas delectus mollitia voluptate quae officia autem esse nisi consectetur eum est omnis quis quibusdam, iure cupiditate quam consequatur! Excepturi fugiat, sed aperiam, omnis ut quod aliquam temporibus quo blanditiis ad nostrum rem laborum quasi nemo doloremque itaque rerum eius, necessitatibus dolores et tempore a? Debitis cupiditate optio assumenda reprehenderit? Sit ad saepe tempore fugit. Repudiandae, cum possimus earum quia accusamus aperiam impedit omnis quos blanditiis fugit ipsam eos, laborum placeat. Dolorem, soluta maiores! Velit qui veniam reprehenderit libero earum quos aliquam dolor! Eaque natus accusantium doloremque, delectus quos cupiditate in molestias nam, error reiciendis, dolorem itaque perspiciatis ex laudantium perferendis rerum velit? Sunt ipsa voluptatibus unde quaerat suscipit ratione eveniet nostrum. Temporibus facere aspernatur, assumenda, nobis quos culpa sint suscipit ratione alias quas unde eveniet possimus minus dolore magnam, autem dolores iure laboriosam dolorum non praesentium quae. Culpa unde ullam laudantium, nam est amet nihil architecto dolores ipsam harum earum ipsa nobis vitae? Debitis eligendi, dolore eaque deleniti placeat officia id sint!
+            
+    include includes/footer
+
+
+  include includes/scripts

@@ -1,0 +1,74 @@
+*
+  margin: 0
+  box-sizing: border-box
+
+html,
+body
+  height: 100%
+  position: relative
+  background: #F5F5F5
+body
+  &.no-scroll
+    overflow: hidden
+
+    &::after
+      position: absolute
+      content: ''
+      width: 100%
+      height: 100%
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      background: rgba($bc, .3)
+
+.wrapper
+  display: flex
+  flex-direction: column
+  min-height: 100%
+
+  .content
+    flex: 1 0 auto
+    max-width: rem(1160px)
+    width: 100%
+    background: $wc
+    margin: auto
+    padding: 0 rem(10)
+
+.container
+  width: 100%
+  margin-right: auto
+  margin-left: auto
+  max-width: rem(1140px)
+  position: relative
+  box-sizing: border-box
+
+  @include lg
+    max-width: rem(960px)
+
+  @include md
+    max-width: rem(720px)
+
+  @include sm
+    max-width: rem(540px)
+
+  @include xs
+    max-width: 100%
+
+.container
+  padding-right: rem(15px)
+  padding-left: rem(15px)
+
+ul
+  padding: 0
+  li
+    list-style: none
+
+.line-separate
+  width: 100%
+  height: rem(1)
+  background: $lgc
+
+
+img
+  // width: 100%  

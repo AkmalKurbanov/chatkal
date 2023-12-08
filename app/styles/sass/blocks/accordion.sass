@@ -1,0 +1,30 @@
+.accordion
+  padding-bottom: rem(100)
+  
+  &__item
+    border-radius: rem(6)
+    background: $wc
+    margin-bottom: rem(15)
+    border: rem(1) solid $lgc
+
+    &:last-child
+      margin-bottom: 0
+
+    &.open
+      .accordion__title
+        .icon
+          transform: none
+
+  &__title
+    min-height: rem(47)
+
+    .icon
+      transform: rotate(-90deg)
+      svg
+        fill: $mc
+
+  &__text
+    display: none
+    padding-left: rem(15)
+    padding-right: rem(15)
+    padding-bottom: rem(15)

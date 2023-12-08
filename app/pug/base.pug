@@ -1,0 +1,45 @@
+extends layouts/main
+
+block vars
+  - var description = '';
+  - var keywords= '';
+  - var ogtitle = '';
+  - var ogtype = '';
+  - var ogurl = '';
+  - var ogimg = '';
+
+block title
+  | Нормативно-правовая база
+block main
+  .wrapper
+    include includes/search
+    .content
+      
+      include includes/svg-sprite
+      include includes/header
+      include includes/breadcrumbs
+
+      
+      .container 
+        .title.title_h2.title_border-none.mb-15
+          p Нормативно-правовая база
+        p.lh-22.mb-40 Государственным агентством по делам государственной службы и местного самоуправления при Кабинете Министров Кыргызской Республики утвержден Перечень нормативных правовых актов, используемых при формировании тестовых заданий (на знание общего законодательства) для кандидатов на главные, старшие и младшие административные должности государственной гражданской службы и муниципальной службы для включения в резерв кадров государственной гражданской службы и муниципальной службы в государственных органах и органах местного самоуправления Кыргызской Республики.
+          | Данный перечень является обязательным при прохождении компьютерного тестирования на знание общего законодательства.
+          | Таким образом, при проведении компьютерного тестирования на знание общего законодательства, будут включены тестовые вопросы из указанных перечней НПА для соответствующих групп должностей.
+        
+        .accordion
+          each item in [1,2,3] 
+            .accordion__item
+              .accordion__title.d-flex.align-center.justify-between.cursor-pointer.p-15.accordion-js
+                p.text-accent.lh-22 Положение о порядке проведения тестирования кандидатов на замещение вакантных административных государственных должностей и административных муниципальных должностей
+                .icon.transition.ml-30
+                  svg(width="30" height="30")
+                    use(xlink:href='#angle')
+              .accordion__text
+                p.fz-14.text-dark Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque inventore, rerum neque alias consequuntur eum distinctio debitis enim mollitia dolores.
+           
+            
+    include includes/footer
+
+
+  include includes/scripts

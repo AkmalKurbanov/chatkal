@@ -1,0 +1,43 @@
+.search
+  z-index: 99
+  top: -100%
+  pointer-events: none
+  opacity: 0
+  width: 100%
+  min-height: rem(100)
+  position: fixed
+  
+  input
+    width: 100%
+    border: none
+    height: rem(50)
+    border: rem(1) solid $lgc
+    border-radius: rem(10)
+
+  &__dropdown
+    width: 100%
+    top: 100%
+    padding: rem(7.5) 0
+    max-height: rem(300)
+    overflow: auto
+
+    ul
+      li
+        a
+          padding: rem(7.5) rem(15)
+
+    &::-webkit-scrollbar
+      width: rem(5)
+      height: rem(8)
+      padding: 10px
+
+    &::-webkit-scrollbar-thumb
+      background-color: $mc
+      border-radius: rem(5)
+
+    
+
+  &.open
+    opacity: 1
+    top: 0
+    pointer-events: inherit

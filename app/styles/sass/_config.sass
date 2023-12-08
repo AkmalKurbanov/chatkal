@@ -1,0 +1,83 @@
+// USER VARIABLES SECTION
+
+$mc: #A25100 // Accent Color
+$fontsize: 16px // Body Font Size
+$tc: #333 // Text Color
+$userfont: roboto-oh5, sans-serif // User Font Family
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+
+
+$wc: #fff
+$bc: #000
+$dc: #323232
+$lgc: #E4E4E4
+$tr: all .3s
+
+
+// Bootstrap compatible gutter variable => $gutter
+// $grid-gutter-width: 30px
+// $gutter: $grid-gutter-width
+
+// IMPORT SECTION
+
+@import 'blocks/mixins/_flex'
+@import 'blocks/mixins/_rem'
+@import 'blocks/mixins/_media'
+@import 'node_modules/normalize.css/normalize'
+@import 'node_modules/macro-css/index.min'
+@import 'node_modules/swiper/swiper-bundle.min'
+
+
+// @import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+// @import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+// @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+// @import 'node_modules/bootstrap/scss/_utilities.scss' // Optional Bootstrap Utilites
+
+// FONTS LOAD SECTION
+						
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		src: url($furl)
+
+
+@include font('lato', normal, 400, '../fonts/Lato-Regular.ttf')
+@include font('lato', italic, 400, '../fonts/roboto-Italic.ttf')
+@include font('lato', normal, 500, '../fonts/Lato-Medium.ttf')
+@include font('lato', italic, 500, '../fonts/Lato-MediumItalic.ttf')
+@include font('lato', normal, 600, '../fonts/Lato-Semibold.ttf')
+@include font('lato', italic, 600, '../fonts/Lato-SemiboldItalic.ttf')
+@include font('lato', normal, 700, '../fonts/Lato-Bold.ttf')
+@include font('lato', italic, 700, '../fonts/Lato-BoldItalic.ttf')
+
+
+// GENERAL CSS SETTINGS
+
+
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $mc
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+body
+	font-family: $userfont
+	font-size: $fontsize
+	color: $tc
+	min-width: rem(320)
+	position: relative
+	overflow-x: hidden
+
+
+

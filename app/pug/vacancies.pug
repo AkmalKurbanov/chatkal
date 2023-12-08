@@ -1,0 +1,41 @@
+extends layouts/main
+
+block vars
+  - var description = '';
+  - var keywords= '';
+  - var ogtitle = '';
+  - var ogtype = '';
+  - var ogurl = '';
+  - var ogimg = '';
+
+block title
+  | Вакансии
+block main
+  .wrapper
+    include includes/search
+    .content
+      
+      include includes/svg-sprite
+      include includes/header
+      include includes/breadcrumbs
+
+      
+      .container 
+        .title.title_h2.title_border-none.mb-15
+          p Вакансии
+        
+        each item in [1,2,3]
+          .border-radius-6.bordered.bg-white.p-15.mb-30 
+            .mb-30
+              p.text-dark.lh-22 Министерство экономики и коммерции Кыргызской Республики объявляет о проведении открытого конкурса на зачисление в резерв кадров на административные должности государственной гражданской службы центрального аппарата и Межрегионального управления:
+            .d-flex.align-end.justify-between 
+              p.fz-14.text-dark.lh-18 
+                b Последний срок:
+                | 17 июля 2022 г.
+              a(href="#").fz-14.text-accent.lh-18.text-decoration-none Подробнее
+
+            
+    include includes/footer
+
+
+  include includes/scripts

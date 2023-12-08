@@ -1,0 +1,36 @@
+.header
+  z-index: 1
+
+  &__top
+    padding: rem(10) rem(15)
+
+  &__bottom-item
+    &:last-child
+      margin-right: 0!important
+
+  &__nav
+    ul
+      li
+        .dropdown
+          right: auto!important
+          left: 0!important
+          min-width: rem(285)
+
+          &.open
+            top: 100%!important
+
+        &:hover
+          ul
+            li
+              a
+                color: $dc
+
+        &:last-child
+          margin-right: 0!important
+          
+        &.active
+          .header__nav-a-parent
+            color: $mc
+            .icon
+              svg
+                fill: $mc

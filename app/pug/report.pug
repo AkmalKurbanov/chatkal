@@ -1,0 +1,40 @@
+extends layouts/main
+
+block vars
+  - var description = '';
+  - var keywords= '';
+  - var ogtitle = '';
+  - var ogtype = '';
+  - var ogurl = '';
+  - var ogimg = '';
+
+block title
+  | Отчет, бюджет,статистика ОМСУ
+block main
+  .wrapper
+    include includes/search
+    .content
+      
+      include includes/svg-sprite
+      include includes/header
+      include includes/breadcrumbs
+
+      
+      .report 
+        .container 
+          .title.title_h2.title_border-none.mb-15
+            p Отчет, бюджет,статистика ОМСУ
+
+          .report__wrap.d-flex.flex-wrap 
+            each item in ['Мясо','Молоко','Молоко','Аква','Растениеводство','Растениеводство','Аква']
+              .report__col.pb-25 
+                a(href="#").report__item.bg-accent.border-radius-6.d-flex.align-center.justify-center.text-decoration-none.transition 
+                  p.fz-22.text-white.fw-700.lh-28.test-center=item
+
+
+
+            
+    include includes/footer
+
+
+  include includes/scripts
