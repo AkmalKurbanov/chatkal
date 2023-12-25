@@ -114,9 +114,9 @@ block main
               .swiper-wrapper
                 each item in [1,2,3,4,5,6,7,8]
                   .swiper-slide
-                    .pride__item 
-                      .slider__item-img.mb-15
-                        img(src="images/dist/pride.webp", alt="") 
+                    a(data-src="https://www.youtube.com/watch?v=vh-OnLkL1DY" data-fancybox="video-gallery").pride__item.cursor-pointer 
+                      .slider__item-img.mb-15.pos-r
+                        img(src="https://i.ytimg.com/vi/vh-OnLkL1DY/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDRuxyKW-7-bBiAKhxL0NEeaAgCcQ", alt="") 
                       .slider__item-desc.text-center.fz-20.text-dark.fw-600
                         p Таалай Бектурганов 
               .swiper-pagination
