@@ -7,6 +7,10 @@ var swiper = new Swiper(".pride-js ", {
     nextEl: ".pride-next",
     prevEl: ".pride-prev",
   },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true
+  },
 });
 
 var swiper = new Swiper(".vote-js ", {
@@ -16,4 +20,5 @@ var swiper = new Swiper(".vote-js ", {
     nextEl: ".vote-next",
     prevEl: ".vote-prev",
   },
+
 });
