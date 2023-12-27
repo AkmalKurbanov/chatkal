@@ -7,6 +7,7 @@ body
   height: 100%
   position: relative
   background: #F5F5F5
+  
 body
   &.no-scroll
     overflow: hidden
@@ -29,30 +30,24 @@ body
 
   .content
     flex: 1 0 auto
-    max-width: rem(1160px)
+    // max-width: rem(1160px)
     width: 100%
     background: $wc
     margin: auto
     padding: 0 rem(10)
 
+    @include sm
+      padding: 0
+
 .container
   width: 100%
   margin-right: auto
   margin-left: auto
-  max-width: rem(1140px)
+  max-width: rem(1600px)
   position: relative
   box-sizing: border-box
 
   @include lg
-    max-width: rem(960px)
-
-  @include md
-    max-width: rem(720px)
-
-  @include sm
-    max-width: rem(540px)
-
-  @include xs
     max-width: 100%
 
 .container
@@ -69,8 +64,30 @@ ul
   height: rem(1)
   background: $lgc
 
-
 img
   // width: 100%  
+.form
+  max-width: rem(920)
+  width: 100%
+  margin: auto
+  margin-bottom: rem(150)
 
-    
+.logo
+  @include md
+    max-width: rem(70)
+    min-width: rem(70)
+    width: 100%
+
+    @include xs
+      margin-right: rem(10) !important
+
+    img
+      width: 100%
+
+
+p
+  @include lg
+    font-size: rem(15)  
+  
+  @include xs  
+    font-size: rem(14)  

@@ -3,12 +3,47 @@
     margin-left: rem(-12)
     margin-right: rem(-12)
 
+    @include sm
+      flex-direction: column
+
+    @include xs
+      margin-left: rem(-6)
+      margin-right: rem(-6)
+
+  &__bg
+    min-height: rem(500)
+
+    @include lg
+      min-height: rem(450)
+
+    @include md
+      min-height: rem(400)
+
+    @include sm
+      min-height: rem(350)
+
+    @include xs
+      min-height: rem(300)
+
   &__col
     width: 50%
     padding: 0 rem(12)
 
+    @include sm
+      width: 100%
+
+    &:first-child
+      @include sm
+        margin-bottom: rem(30)
+
     &_padding-none
       padding: 0
+
+      .list__col
+        width: 50%
+
+        @include xs
+          padding: 0 rem(6)
 
   &__img
     background: $lgc
@@ -17,6 +52,7 @@
 
   &__last-news
     background: #000
+
     &_w50p
       width: 50%
 
@@ -26,25 +62,64 @@
         max-height: rem(380)
         min-height: rem(380)
 
+        @include lg
+          min-height: rem(340)
+          max-height: rem(340)
+
+        @include md
+          max-height: rem(270)
+          min-height: rem(270)
+
+        @include sm
+          max-height: rem(380)
+          min-height: rem(380)
+
     &_vertical
       .list__img
         max-width: 100%
         max-height: rem(170)
         min-height: rem(170)
 
+        @include lg
+          max-height: rem(140)
+          min-height: rem(140)
+
+        @include md
+          max-height: rem(100)
+          min-height: rem(100)
+
+        @include sm
+          max-height: rem(170)
+          min-height: rem(170)
+
     &:hover
       img
         transform: scale(1.1)
-  
+
   &__item-img
     max-width: rem(320)
     width: 100%
+
+    @include sm
+      margin-right: 0!important
+      max-width: 100%
+
+
     img
       width: 100%
-      
+
   &__desc
     padding-bottom: rem(120)
+
+    @include lg
+      padding-bottom: rem(100)
     
+    @include md
+      padding-bottom: rem(80)
+    
+    @include sm
+      padding-bottom: rem(50)
+
     p
       line-height: rem(22)
       color: $dc
@@ -52,3 +127,32 @@
 
       &:last-child
         margin-bottom: 0
+
+  &__item
+    @include sm
+      width: calc( 50% - 7.5px )
+      flex-direction: column
+      padding: rem(10)
+      border: rem(1) solid $lgc
+      border-radius: rem(6)
+
+    @include xs
+      width: 100%
+
+    .btn
+      @include sm
+        width: 100%
+        margin-bottom: rem(10)
+        margin-right: 0!important  
+    
+    .date
+      @include sm
+        order: -3
+        margin-bottom: rem(10)
+
+  &__item-desc
+    @include md
+      padding-top: 0!important
+
+    @include sm
+      @include fdc  

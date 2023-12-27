@@ -1,14 +1,46 @@
 .footer
 	flex: 0 0 auto
 	background: $mc
+	
+	.logo
+		@include xs
+			display: none
 
 	&__wrap
 		padding: rem(40) 0
 
+		@include lg
+			flex-wrap: wrap
+
 	&__bottom
 		background: #7e4001
-		
 
+		@include xs
+			text-align: center
 
+	&__col
+		@include md
 
-	
+		&:first-child
+			@include md
+				width: 60%
+				order: 1
+
+		&:nth-child(2)
+
+			@include md
+				order: 3
+				width: 100%
+				display: flex
+				flex-direction: column
+				align-items: flex-end
+
+			svg
+				@include md
+					width: rem(39)
+					height: rem(46)
+
+		&:last-child
+			@include md
+				order: 2
+				width: 30%

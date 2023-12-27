@@ -1,5 +1,11 @@
 .accordion
   padding-bottom: rem(100)
+
+  @include lg
+    padding-bottom: rem(80)
+
+  @include md
+    padding-bottom: rem(50)
   
   &__item
     border-radius: rem(6)
@@ -17,6 +23,16 @@
 
   &__title
     min-height: rem(47)
+
+    @include lg
+      font-size: rem(15)
+      padding: rem(10)!important
+    
+    @include md
+      font-size: rem(14)
+
+    @include sm
+      font-size: rem(13)
 
     .icon
       transform: rotate(-90deg)

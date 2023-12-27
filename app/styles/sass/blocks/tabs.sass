@@ -1,0 +1,53 @@
+.tab
+  position: relative
+  &__tabs
+    ul
+      li
+        transition: $tr
+        
+        &:hover
+          color: $mc
+
+        a
+          transition: $tr
+
+          &:hover
+            color: $mc
+
+        &:first-child
+          padding-left: 0!important
+          a
+            padding-left: 0!important
+
+        &.active
+          pointer-events: none
+          color: $mc
+          a
+            color: $mc
+
+  &__tabs-slide-element
+    height: rem(2)
+    position: absolute
+    pointer-events: none
+
+  &__content-item
+    position: absolute
+    opacity: 0
+    transition: $tr
+    pointer-events: none
+    top: 0
+    left: 0
+    width: 100%
+    transform: translateY(20px)
+
+    &.show
+      opacity: 1
+      pointer-events: inherit
+      position: relative
+      transform: none
+
+    &.hide
+      opacity: 0
+      pointer-events: none
+      position: absolute
+      transform: translateY(20px)

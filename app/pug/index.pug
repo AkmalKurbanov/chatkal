@@ -18,7 +18,8 @@ block main
       include includes/svg-sprite
       include includes/header
       include includes/hero
-
+      include includes/menu
+      a(href="#menu") #menu 
       .list
         .container 
           .title.title_h2.mb-25 
@@ -115,7 +116,7 @@ block main
                 each item in [1,2,3,4,5,6,7,8]
                   .swiper-slide
                     a(data-src="https://www.youtube.com/watch?v=vh-OnLkL1DY" data-fancybox="video-gallery").pride__item.cursor-pointer 
-                      .slider__item-img.mb-15.pos-r
+                      .slider__item-img.mb-15.pos-r.d-flex.align-center
                         img(src="https://i.ytimg.com/vi/vh-OnLkL1DY/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDRuxyKW-7-bBiAKhxL0NEeaAgCcQ", alt="") 
                       .slider__item-desc.text-center.fz-20.text-dark.fw-600
                         p Таалай Бектурганов 

@@ -23,9 +23,39 @@ block main
         .container 
           .title.title_h2.title_border-none.mb-15
             p Жапаров поручил "вернуть" аэропорт в Чаткале и построить там новый аэровокзал
-          p.text-dark.mb-30 10:08, 16.11.2023
-          
-          img(src="images/dist/news.webp", alt="")
+          .d-flex.align-end.mb-20.justify-between.flex-wrap
+            p.text-dark.mt-10 10:08, 16.11.2023
+            .d-flex.align-center.mt-10 
+              p.text-dark.mr-10 Поделиться 
+              .social 
+                ul.d-flex.align-center
+                  mixin social(name,nameRu,kind)
+                    li
+                      a(href="#")
+                        span Сылка социальной сети
+                          =nameRu
+                        if kind == 'fill'  
+                          .icon.icon_fill-accent
+                            svg(width="20" height="20")
+                              use(xlink:href='#'+name)  
+                        else if kind == 'stroke'  
+                          .icon.icon_stroke-accent  
+                            svg(width="20" height="20")
+                              use(xlink:href='#'+name)  
+                        else
+                          .icon  
+                            svg(width="20" height="20")
+                              use(xlink:href='#'+name)  
+                  +social('facebook','фейсбук','fill')
+                  +social('instagram','инстаграм','fill')
+                  +social('twitter','твиттер','fill')
+                  +social('youtube','юютююб','fill')
+                  +social('tiktok','тикток','stroke')
+                  +social('whatsapp','ватсап','stroke')
+                  +social('telegram','телеграм','stroke')
+            
+          .list__bg.pos-r
+            img(src="images/dist/news.webp", alt="").object-fit-cover
           p.fz-14.text-gray.mt-10 © Пресс-служба президента КР / Султан Досалиев 
       
           .list__desc.mt-25

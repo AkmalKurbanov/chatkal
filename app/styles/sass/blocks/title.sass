@@ -8,6 +8,38 @@
     font-weight: 700
     line-height: rem(33)
 
+    p
+      color: $mc
+      font-size: rem(30)
+      font-weight: 700
+      line-height: rem(33)
+
+      @include lg
+        font-size: rem(27)
+        line-height: rem(30)
+        
+      @include md
+        font-size: rem(24)
+        line-height: rem(27)
+
+      @include sm
+        font-size: rem(21)
+        line-height: normal
+
+    @include lg
+      font-size: rem(27)
+      line-height: rem(30)
+      
+    @include md
+      font-size: rem(24)
+      line-height: rem(27)
+
+    @include sm
+      font-size: rem(21)
+      line-height: normal
+    
+    
+
   &_border-none  
     border: none
     padding-bottom: 0

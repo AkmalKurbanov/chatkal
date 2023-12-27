@@ -24,14 +24,15 @@ block main
           .title.title_h2.title_border-none.mb-25
             p Социальная помощь
 
-          each item in [1,2,3,4,5]
-            a(href="#").list__item.d-flex.text-decoration-none.mb-30 
-              .list__item-img.mr-25 
-                img(src="images/dist/news.webp", alt="")
-              .list__item-desc.pt-10 
-                p.fz-20.fw-600.text-accent.mb-15 Затопило отрезок дороги Балыкчи — Каракол. Видео
-                p.text-dark.lh-22.mb-15 На кадрах МЧС видно, что дорогу не перекрывали, проезд открыт. По данным министерства, размыты 20 гектаров полей с пшеницей и клевером.
-                p.text-accent.lh-22 9 августа 2022
+          .list__wrap.d-flex.flex-wrap.justify-between
+            each item in [1,2,3,4,5]
+              a(href="#").list__item.d-flex.text-decoration-none.mb-30 
+                .list__item-img.mr-25 
+                  img(src="images/dist/news.webp", alt="")
+                .list__item-desc.pt-10 
+                  p.fz-20.fw-600.text-accent.mb-15 Затопило отрезок дороги Балыкчи — Каракол. Видео
+                  p.text-dark.lh-22.mb-15 На кадрах МЧС видно, что дорогу не перекрывали, проезд открыт. По данным министерства, размыты 20 гектаров полей с пшеницей и клевером.
+                  p.text-accent.lh-22.date 9 августа 2022
 
     
     include includes/footer

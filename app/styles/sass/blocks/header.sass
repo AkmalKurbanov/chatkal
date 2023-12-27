@@ -4,11 +4,83 @@
   &__top
     padding: rem(10) rem(15)
 
+    @include sm
+      flex-direction: column-reverse
+
+  &__top-item
+    &:first-child
+      @include sm
+        @include jfcfe
+
+      p
+        @include sm
+          display: none
+
+    &:last-child
+      @include sm
+        justify-content: space-between!important
+        margin-bottom: rem(10)
+
+    #specialButton
+      .icon
+        svg
+          @include sm
+            width: rem(35)
+            height: rem(35)
+
+      .fz-13
+        @include xs
+          font-size: rem(12)
+
+  &__bottom
+    @media (max-width: 1300px)
+      align-items: center
+
+    @include md
+      padding-top: rem(10)
+
+    .fz-18
+
+      @include lg
+        font-size: rem(13)
+
+      @include md
+        display: none
+
+    .w100p
+      
+      .d-flex.align-center.justify-between
+
+        @include md
+          justify-content: flex-end!important
+
+      .d-flex.align-center
+        @media (max-width: 1300px)
+          margin-bottom: 0!important
+
+        @include sm
+          flex-direction: column
+          align-items: flex-end
+
   &__bottom-item
+    white-space: nowrap
+
+    @include sm
+      margin-right: 0!important
+      margin-bottom: rem(5)
+
     &:last-child
       margin-right: 0!important
+      margin-bottom: 0
+
+    .d-flex.align-center
+      @include sm
+        flex-direction: row!important
 
   &__nav
+    @media (max-width: 1300px)
+      display: none
+
     ul
       li
         .dropdown
@@ -27,10 +99,15 @@
 
         &:last-child
           margin-right: 0!important
-          
+
         &.active
           .header__nav-a-parent
             color: $mc
             .icon
               svg
                 fill: $mc
+
+.hamburger
+  display: none
+  @media (max-width: 1300px)
+    display: flex

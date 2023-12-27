@@ -9,7 +9,7 @@ block vars
   - var ogimg = '';
 
 block title
-  | Структура
+  | Контакты
 block main
   .wrapper
     include includes/search
@@ -19,31 +19,30 @@ block main
       include includes/header
       include includes/breadcrumbs
 
-      .structure
-        .container
-          .title.title_h2.title_border-none.text-accent.mb-40 Структура
-
-          .structure__item.text-center.d-flex.align-center.justify-center.flex-column
-            .structure__item-img.d-flex.align-center.justify-center.mb-25.pos-r.border-radius-100 
-              img.object-fit-cover(src="images/dist/structure1.webp", alt="")
-            
-            div
-              p.fz-18.fw-700.text-accent.text-uppercase.mb-10 Тутуев Канболот Мусаевич
-              p.fz-18.text-black.text-uppercase.mb-10 Мэр города нарын
-              p.text-black.opacity-0-5 Дни приема: Четверг, с 16:00 ч. до 18:00 ч.  
+      
+      .container 
+        .title.title_h2.title_border-none.mb-15
+          p Контакты
         
-          .structure__wrap.d-flex.align-start.flex-wrap 
-            
-            each item in [1,2,3]
-              .structure__item.text-center.d-flex.align-center.justify-center.flex-column
-                .structure__item-img.d-flex.align-center.justify-center.mb-25.pos-r.border-radius-100 
-                  img.object-fit-cover(src="images/dist/structure.webp", alt="")
+        .contacts.mt-10
+          .contacts__wrap.d-flex.align-center.border-bottom-lgc
+            .contacts__col.w50p 
+              ul 
+                li.fz-20.text-dark.mb-40
+                  span.text-gray.mr-5 Адрес:
+                  | г. Каракол, ул.Тыныстанова, 21
 
-                div
-                  p.fz-18.fw-700.text-accent.text-uppercase.mb-10 фамилия имя отчество
-                  p.fz-18.text-black.text-uppercase.mb-10 Должность
-                  p.text-black.opacity-0-5 Дни приема: Четверг, с 16:00 ч. до 18:00 ч.  
-
+                li.fz-20.text-dark.mb-40
+                  span.text-gray.mr-5 Телефон: 
+                  a(href="tel:+996392252211").text-dark.text-decoration-none.h-accent +996 (3922) 5‒22‒11
+                
+                li.fz-20.text-dark.mb-40
+                  span.text-gray.mr-5 Почта: 
+                  a(href="mailto:karakol@mail.gov.kg").text-dark.text-decoration-none.h-accent karakol@mail.gov.kg
+              
+            .contacts__col.w50p 
+              #map
+          
           .form
             .title.title_h2.title_border-none.text-accent.mb-30 Напишите нам
             form(action="")
@@ -77,7 +76,24 @@ block main
               .d-flex.justify-between
                 button.btn.btn_secondary Добавить фото
                 button.btn.btn_accent Отправить
+
+          
+            
     include includes/footer
 
 
   include includes/scripts
+  script(src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full") 
+  script.
+    var map;
+
+    DG.then(function () {
+        map = DG.map('map', {
+            center: [54.98, 82.89],
+            zoom: 13
+        });
+
+        DG.marker([54.98, 82.89]).addTo(map).bindPopup('Вы кликнули по мне!');
+    });
+
+    

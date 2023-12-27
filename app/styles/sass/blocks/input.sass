@@ -3,11 +3,21 @@
   margin-left: rem(-15)
   margin-right: rem(-15)
 
+  @include lg
+    margin-left: rem(-10)
+    margin-right: rem(-10)
+
   .input,
   .textarea
     padding: 0 rem(15)
     display: flex
     flex-direction: column
+    
+    @include lg
+      padding: 0 rem(10)
+
+    @include sm
+      padding: 0 rem(5)
 
 .input,
 .textarea
@@ -18,10 +28,12 @@
     height: rem(36)
     padding: 0 rem(15)
 
+    
+
   textarea
     min-height: rem(100)
     padding: rem(15)
-    resize: vertical 
+    resize: vertical
 
   input,
   textarea

@@ -1,0 +1,82 @@
+extends layouts/main
+
+block vars
+  - var description = '';
+  - var keywords= '';
+  - var ogtitle = '';
+  - var ogtype = '';
+  - var ogurl = '';
+  - var ogimg = '';
+
+block title
+  | Журнал регистрации обращений 
+block main
+  .wrapper
+    include includes/search
+    .content
+      
+      include includes/svg-sprite
+      include includes/header
+      include includes/breadcrumbs
+
+      .container
+        .title.title_h2.title_border-none.mb-40 
+          p Журнал регистрации обращений 
+
+        .tab.tab-js
+          .tab__tabs.border-bottom-lgc.pos-r
+            ul.d-flex.align-end
+              li(data-id="tab1")
+                a(href="#").fz-15.fw-500.text-dark.text-decoration-none.p-10.d-flex.align-center.text-center Вопросы - ответы  
+              li(data-id="tab2").active 
+                a(href="#").fz-15.fw-500.text-dark.text-decoration-none.p-10.d-flex.align-center.text-center Карта обращений
+            .tab__tabs-slide-element.bg-accent.transition
+          .tab__content.pos-r.o-hidden.mt-30
+            
+            .tab__content-item(data-id="tab1")
+              
+              each item in [1,2]
+                .bordered-lgc.border-radius-6.p-25.mb-30  
+                  div
+                    .d-flex.align-end.justify-between.mb-10
+                      p.fz-18.text-accent Байдылдаев Байтур
+                      p.fz-15.text-accent.ml-10 09.08.2022
+                    p.fz-15.mb-15 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sem velit viverra cursus velit quis at nibh vehicula nunc. Aliquam egestas nunc nam non enim massa. Adipiscing nunc, aliquam, faucibus tincidunt ut. Gravida scelerisque imperdiet ornare non. Tempus sed in urna lobortis odio.
+
+                    .gallery 
+                      .gallery__wrap.d-flex.flex-wrap 
+                        each item in [1,2,3]
+                          a(data-src="https://picsum.photos/1920/1080?random="+item data-fancybox="gallery").gallery__item.o-hidden.pos-r.mr-10.mb-10.cursor-pointer
+                            img.object-fit-contain(src="https://picsum.photos/100/60?random="+item, alt="") 
+
+                  a(href="#").btn.btn_accent.mt-15 Смотреть ответ 
+            
+            .tab__content-item(data-id="tab2")
+              
+              each item in [1,2]
+                .bordered-lgc.border-radius-6.p-25.mb-30  
+                  div
+                    .d-flex.align-end.justify-between.mb-10
+                      p.fz-18.text-accent Байдылдаев Байтур
+                      p.fz-15.text-accent.ml-10 09.08.2022
+                    p.fz-15.mb-15 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sem velit viverra cursus velit quis at nibh vehicula nunc. Aliquam egestas nunc nam non enim massa. Adipiscing nunc, aliquam, faucibus tincidunt ut. Gravida scelerisque imperdiet ornare non. Tempus sed in urna lobortis odio.
+
+                    .gallery 
+                      .gallery__wrap.d-flex.flex-wrap 
+                        each item in [1,2,3]
+                          a(data-src="https://picsum.photos/1920/1080?random="+item data-fancybox="gallery").gallery__item.o-hidden.pos-r.mr-10.mb-10.cursor-pointer
+                            img.object-fit-contain(src="https://picsum.photos/100/60?random="+item, alt="") 
+
+                  a(href="#").btn.btn_accent.mt-15 Смотреть ответ 
+
+           
+    
+
+       
+     
+
+
+    include includes/footer
+
+
+  include includes/scripts

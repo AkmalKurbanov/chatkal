@@ -2,13 +2,28 @@
   &__wrap
     margin-left: rem(-14)
     margin-right: rem(-14)
+    
+    @include lg
+      margin-left: rem(-10)
+      margin-right: rem(-10)
 
   &__col
     padding: 0 rem(14)
     width: 33.33%
 
+    @include lg
+      padding: 0 rem(10)
+      padding-bottom: rem(15) !important 
+
+    @include sm
+      width: 50%
+
+
   &__item
     min-height: rem(110)
+    
+    @include lg
+      min-height: rem(90)
 
     &:hover
       background: $dc
