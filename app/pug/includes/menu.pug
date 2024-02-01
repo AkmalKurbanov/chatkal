@@ -1,6 +1,49 @@
-#menu
-  ul 
-    li 
-      a(href="#")  1
-    li 
-      a(href="#")  1
+.menu.bg-white
+  .d-flex.justify-between.p-15 
+    a(href="#").menu__logo
+      img(src="images/dist/logo-header.svg", alt="") 
+    .menu__close.close-btn-js
+      .icon
+        svg(width="15" height="14")
+          use(xlink:href='#close')
+
+  .top-level 
+
+    .menu__item
+      a(href="#").text-dark.text-decoration-none.h-accent
+        span Документация, связи с общественностью
+
+      .icon.cursor-pointer.menu-to-lower-js
+        svg(width="20" height="20")
+          use(xlink:href='#angle-right')
+      
+      .lower-level
+        .menu__item.menu__item_title.d-flex.align-center.justify-center
+          
+          .icon.cursor-pointer.menu-to-top-js
+            svg(width="20" height="20")
+              use(xlink:href='#angle-left')
+
+          .text-dark.text-decoration-none aaaaa
+
+        .lower-level__wrap   
+          //- .menu__item 
+          //-   a(href="#").text-dark.text-decoration-none.h-accent 
+          //-     span aaa
+
+          ul.header__nav-dropdown.dropdown
+            li
+              a(href='http://chatkal-prod.local' target='_self' style='')
+                span Информация об истории
+            li
+              a(href='http://chatkal-prod.local' target='_self' style='')
+                span Управление
+            li
+              a(href='http://chatkal-prod.local' target='_self' style='')
+                span Структуры
+            li
+              a(href='http://chatkal-prod.local' target='_self' style='')
+                span Главы сельских управ
+            li
+              a(href='http://chatkal-prod.local' target='_self' style='')
+                span Руководители районных учреждений-организаций и предприятий

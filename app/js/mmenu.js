@@ -1,28 +1,18 @@
-// const menu = new MmenuLight(document.querySelector('#menu'), {
-//   // title: 'Menu',
-//   // theme: 'light',
-//   // selected: 'Selected'
-// });
-// menu.enable('all'); // '(max-width: 900px)'
-// menu.offcanvas({
-//   // position: 'left',// [| 'right']
-//   // move: true,// [| false]
-//   // blockPage: true,// [| false | 'modal']
-// });
+$(document).on('click', '.menu-js', function () {
+  $('.menu').removeClass('close');
+  $('.menu').addClass('open');
+  $('body').addClass('no-scroll');
+});
 
-// //	Open the menu.
-// document.querySelector('a[href="#menu"]')
-//   .addEventListener('click', (evnt) => {
-//     menu.open();
+$(document).on('click', '.menu-to-lower-js', function () {
+  $(this).parent().find('.lower-level').addClass('show')
+});
+$(document).on('click', '.menu-to-top-js', function () {
+  $(this).parent().parent().removeClass('show');
+});
 
-//     //	Don't forget to "preventDefault" and to "stopPropagation".
-//     evnt.preventDefault();
-//     evnt.stopPropagation();
-//   });
-
-
-
-$('.nav-js ul li').each(function (index) {
-  let itemUp = $(this).find('span').text();
-  console.log(itemUp);
+$(document).on('click', '.close-btn-js', function () {
+  $('.menu').addClass('close');
+  $('.menu').removeClass('open');
+  $('body').removeClass('no-scroll');
 });

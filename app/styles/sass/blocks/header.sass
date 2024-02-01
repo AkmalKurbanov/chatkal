@@ -1,6 +1,9 @@
 .header
   z-index: 1
 
+  .logo
+    @include md
+      padding-bottom: 0!important
   &__top
     padding: rem(10) rem(15)
 
@@ -44,12 +47,12 @@
       @include lg
         font-size: rem(13)
 
-      @include md
+      @include xs
         display: none
 
     .w100p
       
-      .d-flex.align-center.justify-between
+      .d-flex.align-end.justify-between
 
         @include md
           justify-content: flex-end!important
@@ -65,7 +68,7 @@
   &__bottom-item
     white-space: nowrap
 
-    @include sm
+    @include md
       margin-right: 0!important
       margin-bottom: rem(5)
 
@@ -100,6 +103,7 @@
         &:last-child
           margin-right: 0!important
 
+        &.hover,
         &.active
           .header__nav-a-parent
             color: $mc

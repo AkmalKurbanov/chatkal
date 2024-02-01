@@ -84,6 +84,12 @@
         <symbol id="angle" viewBox="0 0 16 16">
           <path d="M8 10.8496L4 6.8496L4.8496 6L8 9.1504L11.1504 6L12 6.8496L8 10.8496Z"></path>
         </symbol>
+        <symbol id="angle-right" viewBox="0 0 16 16">
+          <path d="M10.8496 8L6.8496 12L6 11.1504L9.1504 8L6 4.8496L6.8496 4L10.8496 8Z" fill="black"></path>
+        </symbol>
+        <symbol id="angle-left" viewBox="0 0 16 16">
+          <path d="M5.1504 8L9.1504 4L10 4.8496L6.8496 8L10 11.1504L9.1504 12L5.1504 8Z" fill="black"></path>
+        </symbol>
         <symbol id="marker" viewBox="0 0 20 20">
           <path d="M9.625 14.104C11.0277 12.9793 12.0937 11.8857 12.823 10.823C13.5523 9.76033 13.917 8.75 13.917 7.792C13.917 6.986 13.771 6.29833 13.479 5.729C13.1877 5.15967 12.8267 4.698 12.396 4.344C11.9653 3.99 11.5 3.733 11 3.573C10.5 3.413 10.0417 3.333 9.625 3.333C9.22233 3.333 8.771 3.413 8.271 3.573C7.771 3.733 7.30233 3.99 6.865 4.344C6.427 4.698 6.06233 5.15967 5.771 5.729C5.479 6.29833 5.333 6.986 5.333 7.792C5.333 8.75 5.69767 9.76033 6.427 10.823C7.15633 11.8857 8.22233 12.9793 9.625 14.104ZM9.625 15.792C7.72233 14.3613 6.309 12.9897 5.385 11.677C4.46167 10.3643 4 9.06933 4 7.792C4 6.83333 4.16667 5.99633 4.5 5.281C4.83333 4.56567 5.271 3.965 5.813 3.479C6.35433 2.993 6.96167 2.625 7.635 2.375C8.309 2.125 8.97233 2 9.625 2C10.2917 2 10.9583 2.125 11.625 2.375C12.2917 2.625 12.8957 2.993 13.437 3.479C13.979 3.965 14.4167 4.56567 14.75 5.281C15.0833 5.99633 15.25 6.83333 15.25 7.792C15.25 9.06933 14.7883 10.3643 13.865 11.677C12.941 12.9897 11.5277 14.3613 9.625 15.792ZM9.625 9.167C10.0417 9.167 10.3957 9.021 10.687 8.729C10.979 8.43767 11.125 8.08367 11.125 7.667C11.125 7.25033 10.979 6.896 10.687 6.604C10.3957 6.31267 10.0417 6.167 9.625 6.167C9.20833 6.167 8.85433 6.31267 8.563 6.604C8.271 6.896 8.125 7.25033 8.125 7.667C8.125 8.08367 8.271 8.43767 8.563 8.729C8.85433 9.021 9.20833 9.167 9.625 9.167ZM4 18.25V16.917H15.25V18.25H4Z"></path>
         </symbol>
@@ -117,6 +123,10 @@
         <symbol id="hamburger" viewBox="0 0 19 14">
           <path d="M1.5 1H17.5M7.5 7H17.5M3.5 13H17.5" stroke="#A25100" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
           <path d="M1.5 1H17.5M7.5 7H17.5M3.5 13H17.5" stroke="#A25100" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+        </symbol>
+        <symbol id="close" viewBox="0 0 25 24">
+          <path d="M3 2L23 22M23 2L3 22" stroke="#A25100" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path d="M3 2L23 22M23 2L3 22" stroke="#A25100" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
         </symbol>
       </svg>
       <header class="header mb-5 pos-r">
@@ -206,18 +216,20 @@
           </div>
           <div class="header__bottom d-flex align-end justify-between"><a class="logo d-flex align-center justify-center pt-15 pb-15 mr-20" href="#"><img src="images/dist/logo-header.svg" alt=""></a>
             <div class="w100p">
-              <div class="d-flex align-center justify-between border-bottom-lgc pb-10 mb-10">
+              <div class="d-flex align-end justify-between border-bottom-lgc pb-10 mb-10">
                 <div class="fz-18 text-uppercase text-accent fw-600"> 
                   <p>ЧАТКАЛ ЗОЛОТАЯ ДОЛИНА   </p>
                 </div>
-                <div class="d-flex align-center"> 
-                  <button class="btn btn_reset mt-5 hamburger menu-js mb-10">
-                    <div class="icon"> 
-                      <svg width="24" height="24">
-                        <use xlink:href="#hamburger"></use>
-                      </svg>
-                    </div>
-                  </button>
+                <div class="d-flex align-center justify-end flex-wrap">
+                  <div class="w100p d-flex justify-end">
+                    <button class="btn btn_reset mt-5 hamburger menu-js mb-10">
+                      <div class="icon"> 
+                        <svg width="24" height="24">
+                          <use xlink:href="#hamburger"></use>
+                        </svg>
+                      </div>
+                    </button>
+                  </div>
                   <div class="header__bottom-item mr-25"> 
                     <div class="d-flex align-center cursor-pointer">
                       <div class="icon icon_fill-accent mr-5">
@@ -455,7 +467,7 @@
     <footer class="footer">
       <div class="container"> 
         <div class="footer__wrap d-flex justify-between">
-          <div class="footer__col d-flex align-start"><a class="logo d-flex align-center justify-center mr-25" href="#"><img src="images/dist/logo-footer.svg" alt=""></a>
+          <div class="footer__col d-flex align-start"><a class="logo d-flex align-center justify-center mr-25" href="#"><img src="images/dist/logo-header.svg" alt=""></a>
             <div>
               <div class="fz-18 text-uppercase text-white fw-600">
                 <p>ЧАТКАЛ ЗОЛОТАЯ ДОЛИНА   </p>

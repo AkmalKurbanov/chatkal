@@ -22,6 +22,7 @@ body
       bottom: 0
       left: 0
       background: rgba($bc, .3)
+      z-index: 99
 
 .wrapper
   display: flex
@@ -73,6 +74,9 @@ img
   margin-bottom: rem(150)
 
 .logo
+  max-width: rem(107)
+  min-width: rem(107)
+
   @include md
     max-width: rem(70)
     min-width: rem(70)
@@ -81,8 +85,8 @@ img
     @include xs
       margin-right: rem(10) !important
 
-    img
-      width: 100%
+  img
+    width: 100%
 
 
 p
@@ -91,3 +95,12 @@ p
   
   @include xs  
     font-size: rem(14)  
+
+
+.close-btn-js
+  width: rem(25)
+  height: rem(25)
+  @include aic-jcc
+  border-radius: 100%
+  border: rem(1) solid $mc      
+  cursor: pointer
